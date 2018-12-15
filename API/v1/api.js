@@ -2,7 +2,6 @@
 module.exports = {
 
     case1_function: function (input, example, callback) {
-        console.log(input)
         start();
         function start() {
             let splitPayloadInput = input.split(',');
