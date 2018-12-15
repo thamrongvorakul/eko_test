@@ -1,0 +1,30 @@
+{
+  "name": "EKO_TEST_APP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eko_core.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "nodemon eko_core.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thamrongvorakul/eko_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thamrongvorakul/eko_test.git"
+  },
+  "homepage": "https://github.com/thamrongvorakul/eko_test.git",
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "body-parser": "^1.15.2",
+    "chai": "^4.2.0",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "helmet": "^2.1.2",
+    "lodash": "^4.15.0",
+    "mocha": "^5.2.0"
+  }
+}

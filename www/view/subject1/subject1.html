@@ -1,0 +1,75 @@
+<style>
+    img:after {
+        content: none;
+    }
+</style>
+<nav-bar></nav-bar>
+<div class="container" style="margin-top:5%;">
+    <div class="row">
+        <div class="col-md-5 col-sm-5 col-visible-xs">
+            <p>
+                <b>Case1 </b>:​ Calculate the delivery cost of the given delivery route. Follow the route as given; do
+                not count any extra stops. In case given route is not exists, output ’No Such Route’
+            </p>
+            <div>
+                <img src="images/case1.png" style="width:100%;">
+            </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-6 col-sm-6 ">
+            <h3 class="margin-bottom-30">Fill your route to calculate the cost e.g. A-E, A-F, A-D</h3>
+            <p style="color:red;font-size:14px;">* You can calculate with multiple route by using ',' to seperate the
+                route. ( e.g. A-B, C-F, etc... )</p>
+            <form>
+                <div class="login-block">
+                    <div class="input-group margin-bottom-20">
+                        <span class="input-group-addon rounded-left"><i class="fa fa-exchange color-blue"></i></span>
+                        <input type="text" class="form-control rounded-right" placeholder="A-B-E, A-D, E-A-C-F, A-D-F"
+                            ng-model="THIS.input">
+                    </div>
+                    <div class="row margin-bottom-70">
+                        <div class="col-md-12">
+                            <button class="btn-u btn-u-blue btn-block rounded" ng-click="THIS.calculate()">Calculate</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="panel-body" style="padding:0px;" ng-if="THIS.data">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">Route</th>
+                            <th style="text-align:center;">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align:center;" >
+                        <tr ng-repeat="item in THIS.data.dataSet">
+                            <td style="vertical-align:middle;">
+                               {{item.route}}
+                            </td>
+                            <td style="vertical-align:middle;">{{item.cost}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+<!-- 
+                <table ng-table="THIS.tableParams" class="table table-bordered">
+                    <tr class="select-table" ng-repeat="item in $data">
+                        <td class="text-center" data-title="'Route'" style="vertical-align: middle;">
+                            {{item.route}}
+                        </td>
+                        <td class="text-center" data-title="'Cost'" style="vertical-align: middle;">
+                            {{item.cost > 0?item.cost:'No Such Route'}}
+                        </td>
+                    </tr>
+                    <tr class="table-row-no-data" ng-if="THIS.tableParams.total() == 0">
+                        <td colspan="12" class="text-center" style="color:blue;">ไม่พบข้อมูล</td>
+                    </tr>
+                </table> -->
+            </div>
+        </div>
+
+
+    </div>
+</div>

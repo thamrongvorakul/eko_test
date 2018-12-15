@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="MainApp">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.min.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/blocks.css" type="text/css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <link rel="stylesheet" href="css/profile.css" type="text/css">
+    <link rel="stylesheet" href="css/sky-form.css" type="text/css">
+    <link rel="stylesheet" href="css/custom-sky-form.css" type="text/css">
+    <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css" type="text/css">
+</head>
+
+<body>
+    <div ui-view autoscroll="true"></div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <script type="text/javascript" src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+    <script type="text/javascript" src="core/CoreController.js"></script>
+    <script type="text/javascript" src="core/CoreFunction.js"></script>
+    <script type="text/javascript" src="core/CoreState.js"></script>
+    <script type="text/javascript" src="core/NavbarDirective.js"></script>
+
+    <script>
+        $(document).keydown(function (e) {
+            var elid = $(document.activeElement).hasClass('form-control');
+            if (e.keyCode === 8 && !elid) {
+                return false;
+            };
+        });
+    </script>
+</body>
+
+</html>
